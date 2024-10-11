@@ -103,7 +103,7 @@ mkdir /tmp/pwn
 touch /tmp/pwn/college
 /challenge/run
 ```
-## Challenge 1: Finding Files (Summary/Learning):
+## Challenge 11: Finding Files (Summary/Learning):
 We have now been introduced to the `find / -name` command which is used for searching a specific file or text within the file provided the path is given . We were supposed to find the flag hidden in the filesystem 
 
 ### Solution
