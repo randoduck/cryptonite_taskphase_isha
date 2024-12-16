@@ -37,7 +37,7 @@ fgets(local_38, 0xb, stdin);
 ```
 - The `0xb` (11 in decimal) restricts input to **11 characters**, leaving no room to overflow into adjacent memory.
 - and`fgets` appends a null terminator (`\0`), which further limits overflow attempts.
-- 
+
 #### Explanation
 Moreover , Even if a buffer overflow was possible, there’s no critical memory (e.g., return addresses or function pointers) adjacent to `local_38` in this program. Overwriting it wouldn’t help achieve admin access or gain shell access.
 **format string exploit**
