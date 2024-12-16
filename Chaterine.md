@@ -37,13 +37,15 @@ fgets(local_38, 0xb, stdin);
 ```
 - The `0xb` (11 in decimal) restricts input to **11 characters**, leaving no room to overflow into adjacent memory.
 - and`fgets` appends a null terminator (`\0`), which further limits overflow attempts.
- 
+- 
+#### Explanation
 Moreover , Even if a buffer overflow was possible, there’s no critical memory (e.g., return addresses or function pointers) adjacent to `local_38` in this program. Overwriting it wouldn’t help achieve admin access or gain shell access.
 **format string exploit**
 works by crafting malicious input for functions like `printf` to manipulate memory. In this case there is a format string vulnerability in this challenge (`printf(local_38)`) but we can only use it for **leaking addresses**, not directly overwriting memory.
 After further Research I discovered this was beacuse of Limited Write Capabilities in format string, 
 The format string vulnerability in `printf` can read memory (e.g., `%p` to leak pointers), but it cannot directly write to arbitrary memory. This is because the program does not use functions like `fprintf` or `%n` (which could be used to write values to memory).
 The stack layout is not exploitable because the vulnerable buffer (`local_38`) is too small and far from critical elements like the return address or saved registers. Specifically:  The return address is stored in `local_20`, which is 0x20 bytes (32 bytes) away from the start of `local_38`. Even if the buffer could overflow, the gap is too large to overwrite the return address. One could figure this out using  `gdb`, I inspected the stack layout, hence confirmed that the stack layout is safe from exploitation in this context.
+
 ---
 
 #### **Why Heap Exploitation is the Best Option**
