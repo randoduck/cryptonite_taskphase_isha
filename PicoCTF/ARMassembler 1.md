@@ -9,7 +9,7 @@ randoduck@DESKTOP-2PM3SNS:~$ wget https://mercury.picoctf.net/static/1c8d50e39cf
 randoduck@DESKTOP-2PM3SNS:~$ aarch64-linux-gnu-gcc -o trail1 ./chall_1.S -static
 randoduck@DESKTOP-2PM3SNS:~$ cat chall_1.S
 ```
-On executing this we get the program in assembly langauge :
+On executing this we get the program in assembly langauge , i have commented all the lines describing thier execution which are crucial for understanding the flow.
 ```bash 
         .arch armv8-a # The target architecture ARMv8-A.
         .file   "chall_1.c"
@@ -45,7 +45,7 @@ func:
         .section        .rodata
         .align  3
 .LC0:
-        .string "You win!" # This is the desired outcome , which would be printed if the Result of the function is 0 
+        .string "You win!" # This is the desired outcome , which would be printed if the Result of the function is 0 <3
         .align  3
 .LC1:
         .string "You Lose :("
@@ -116,6 +116,7 @@ The result 77 is stored back at stack offset 28.
 `ldr w1, [sp, 28]  ; w1 = 77
 ldr w0, [sp, 12]  ; w0 = input
 sub w0, w1, w0    ; w0 = w1 - w0`
+
 w0=77−X **Here X is the input we give and it must match with 0 for the program to print *You win!* and hence our X must be 77**
 
 ### Flag crafting 
