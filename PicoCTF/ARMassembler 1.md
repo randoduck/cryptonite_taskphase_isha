@@ -105,21 +105,22 @@ lsl w0, w1, w0    ; w0 = w1 << w0
 58≪2=58×2^2=58×4=232
 The result 232 is stored at stack offset 28.
 
-### Division 
+### Division :
 `ldr w1, [sp, 28]  ; w1 = 232 *its important to keep track of the values in w0, w1*
 ldr w0, [sp, 24]  ; w0 = 3
 sdiv w0, w1, w0   ; w0 = w1 / w0`
 232÷3=77 as it is integer division 
 The result 77 is stored back at stack offset 28.
 
-### Subtraction 
+### Subtraction :
 `ldr w1, [sp, 28]  ; w1 = 77
 ldr w0, [sp, 12]  ; w0 = input
 sub w0, w1, w0    ; w0 = w1 - w0`
 
 w0=77−X **Here X is the input we give and it must match with 0 for the program to print *You win!* and hence our X must be 77**
 
-### Flag crafting 
+### Flag crafting : 
+
 The ideal input i.e 77 must be converted into hex and then into 32 bit for which we use a python program. 
 ```python
 >>> hex(77)
