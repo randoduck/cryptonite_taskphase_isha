@@ -24,15 +24,13 @@ After Installation I opened `qsstv` and `pavucontrol` on two different tabs and 
 - The mode must be set to Scottie 1 , thanks to the hint 
 
 It should look somewhat like this :
-
+![Screenshot (178)](https://github.com/user-attachments/assets/443df0dc-c2f8-4e85-b011-e78289536ab1)
 
 After executing this command :
 ```bash
 paplay -d virtual-cable message.wav
 ```
 we get the final flag as :
-
-
-
+![moon](https://github.com/user-attachments/assets/7775a179-8a31-4e95-9a54-e27337b0e996)
 picoCTF{beep_boop_im_in_space}
 ## <3
