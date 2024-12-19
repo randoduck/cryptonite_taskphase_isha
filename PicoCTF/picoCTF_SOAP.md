@@ -20,7 +20,8 @@ One more tool that I used to make this process easier was `Foxy Proxy` which hel
 ![Screenshot (183)](https://github.com/user-attachments/assets/e2e9b661-f5e3-4ede-956c-d0ae8e80cd00)
 
 ## Solution
-Firstly I navigated to the challenge and started the Instance , On starting the Instance I copied the address and pasted it in the `Open Browser` section under `Proxy` tab and just to make sure everything goes smoothly I also switched to `Burp` proxy in the `Foxy Proxy` extension after opening the web page. 
+Firstly I navigated to the challenge and started the Instance , On starting the Instance I copied the address and pasted it in the `Open Browser` section under `Proxy` tab and just to make sure everything goes smoothly . I switched to `Burp` proxy in the `Foxy Proxy` extension after opening the web page and switched to mobile hotspot as well as attempts while being connected to my own wifi were unsuccessful.
+
 ![image](https://github.com/user-attachments/assets/f23e6a90-7ad8-4012-bf02-d1054c4839b8)
 
 Once you open the webpage and Click on any of the boxes labeled as `Details` and going back to Burpsuite , this is what you get :
