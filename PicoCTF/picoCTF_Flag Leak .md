@@ -34,7 +34,9 @@ echo: Prints the string to the terminal or pipes it to the next command.
 %$i\$s:
 %: A format specifier .
 $i: The current value of i in the loop, replaced on each iteration.
+
 \$: The \ escapes the dollar sign $ so it is treated as a literal character in the string.
+
 s: part of a formatted string, intended for a format string vulnerability.
 
 ```bash
