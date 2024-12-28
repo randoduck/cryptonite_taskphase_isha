@@ -10,3 +10,4 @@ The Hint given was pretty clear that the challenge had to do something with rota
 ![Screenshot (231)](https://github.com/user-attachments/assets/0e2e2152-c1a4-43c0-84a2-d13fda567d17)
 
 *flag.txt: picoCTF{r0tat1on_d3crypt3d_555957f3}*
+## <3
